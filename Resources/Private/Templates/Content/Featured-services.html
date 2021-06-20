@@ -1,0 +1,69 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+
+
+    <f:layout name = "Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="featured-services" description="scaffold descr" label="featured-services">
+            <flux:form.option name="group" value="scaffold" />
+            <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
+            <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+
+            <flux:form.sheet name="Column_1" label="Column_1 title">
+                <flux:field.text name="text1_2" label="Column_1 bootstrap icon" placeholder="bi bi-laptop"/>
+                <flux:field.text name="text1" label="Column_1 title" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="Column_2" label="Column_2 title">
+                <flux:field.text name="text2_2" label="Column_2 bootstrap icon" placeholder="bi bi-briefcase"/>
+                <flux:field.text name="text2" label="Column_2 title" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="Column_3" label="Column_3 title">
+                <flux:field.text name="text3_2" label="Column_3 bootstrap icon" placeholder="bi bi-calendar4-week"/>
+                <flux:field.text name="text3" label="Column_3 title" enableRichText="1"/>
+            </flux:form.sheet>
+
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <a>Featured-services</a><br>
+        <div style="border-bottom: 1px solid#000; width: 100%"></div>
+
+    </f:section>
+
+    <f:section name="Main">
+        <section id="featured-services" class="featured-services section-bg">
+            <div class="container">
+
+                <div class="row no-gutters">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box">
+                            <div class="icon"><i class="{text1_2}"></i></div>
+                            <f:format.html>{text1}</f:format.html>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box">
+                            <div class="icon"><i class="{text2_2}"></i></div>
+                            <f:format.html>{text2}</f:format.html></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box">
+                            <div class="icon"><i class="{text3_2}"></i></div>
+                            <f:format.html>{text3}</f:format.html></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+
+</div>
