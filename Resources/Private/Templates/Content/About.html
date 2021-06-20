@@ -1,0 +1,73 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+
+
+    <f:layout name = "Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="about" description="about section" label="scaffold about">
+            <flux:form.option name="group" value="scaffold" />
+            <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
+            <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+
+            <flux:form.sheet name="title" label="main title" description="about main title">
+                 <flux:field.text name="texts" label="Header title" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="maintext" label="main text" description="about main text">
+                 <flux:field.text name="mtexts" label="main text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="images" label="image" description="about image">
+                <flux:field.inline.fal name="settings.image" required="1" maxItems="1" minItems="1" />
+            </flux:form.sheet>
+
+
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <a>About</a><br>
+        <div style="border-bottom: 1px solid#000; width: 100%"></div>
+            {texts}
+        <div class="row">
+            <f:for each="{v:content.resources.fal(field: 'settings.image', uid: record.uid)}" as="image">
+                <div class="col-xs-2">
+                    <p>{image.title}</p>
+                    <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" maxHeight="150" maxWidth="150" class="img-fluid"/><br/>
+                </div>
+            </f:for>
+        </div>
+    </f:section>
+
+    <f:section name="Main">
+
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <f:format.html>{texts}</f:format.html>
+
+                 </div>
+
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        {v:content.resources.fal(field: 'settings.image') -> v:iterator.first() -> v:variable.set(name: 'image')}
+                        <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}"
+                        class="img-fluid"/><br/>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <f:format.html>{mtexts}</f:format.html>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+
+</div>
