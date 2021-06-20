@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone = "yes" ?>
+<xliff version = "1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="ext_scaffold">
+        <header/>
+        <body>
+            <trans-unit id="flux.home"/>
+            <trans-unit id="flux.home.description"/>
+            <trans-unit id="flux.example"/>
+            <trans-unit id="flux.example.form"/>
+            <trans-unit id="flux.example.description"/>
+            <trans-unit id="flux.example.fields.headline"/>
+        </body>
+    </file>
+
+
+
+</xliff>

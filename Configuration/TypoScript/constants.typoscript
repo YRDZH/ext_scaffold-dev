@@ -1,0 +1,6 @@
+plugin.tx_ext_scaffold{
+    view{
+        templateRootPaths.0 = EXT:ext_scaffold/Resources/Private/Templates/
+        layoutsRootPaths.0 = EXT:ext_scaffold/Resources/Private/Layouts/
+    }
+}

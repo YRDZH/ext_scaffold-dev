@@ -1,0 +1,71 @@
+{
+    "name": "helhum/ext-scaffold",
+    "type": "typo3-cms-extension",
+    "description": "Extension skeleton for TYPO3 7 and 8",
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "scaffold"
+    ],
+    "homepage": "https://helhum.io",
+    "support": {
+        "issues": "https://github.com/helhum/ext_scaffold/issues"
+    },
+    "authors": [
+        {
+            "name": "Helmut Hummel",
+            "email": "info@helhum.io",
+            "role": "Developer",
+            "homepage": "https://helhum.io"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=5.5 <7.3",
+        "typo3/cms-core": "^7.6.23 || ^8.7.10",
+        "typo3/cms-fluid": "^7.6.23 || ^8.7.10",
+        "typo3/cms-frontend": "^7.6.23 || ^8.7.10"
+    },
+    "require-dev": {
+        "nimut/testing-framework": "^3.0"
+    },
+    "conflict": {
+        "typo3/cms-composer-installers": "<1.4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Helhum\\ExtScaffold\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Helhum\\ExtScaffold\\Tests\\": "Tests/"
+        }
+    },
+    "replace": {
+        "ext_scaffold": "self.version",
+        "typo3-ter/ext-scaffold": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor"
+    },
+    "scripts": {
+        "link-extension": [
+            "@php -r 'is_dir($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/\") || mkdir($extFolder, 0777, true);'",
+            "@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/ext_scaffold\") || symlink(__DIR__,$extFolder);'"
+        ],
+        "post-autoload-dump": [
+            "@link-extension"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "typo3/cms": {
+            "extension-key": "ext_scaffold",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/public"
+        }
+    }
+}
