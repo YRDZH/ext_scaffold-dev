@@ -9,7 +9,7 @@
     <f:layout name = "Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="about" description="about section" label="scaffold about">
+        <flux:form id="about" description="about section" label="About">
             <flux:form.option name="group" value="scaffold" />
             <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
             <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
@@ -35,7 +35,8 @@
         <div style="border-bottom: 1px solid#000; width: 100%"></div>
             {texts}
         <div class="row">
-            <f:for each="{v:content.resources.fal(field: 'settings.image', uid: record.uid)}" as="image">
+
+             <f:for each="{v:content.resources.fal(field: 'settings.image', uid: record.uid)}" as="image">
                 <div class="col-xs-2">
                     <p>{image.title}</p>
                     <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" maxHeight="150" maxWidth="150" class="img-fluid"/><br/>
