@@ -34,15 +34,18 @@
         <a>About</a><br>
         <div style="border-bottom: 1px solid#000; width: 100%"></div>
             {texts}
-        <div class="row">
+        <f:comment>
+            <div class="row">
 
-             <f:for each="{v:content.resources.fal(field: 'settings.image', uid: record.uid)}" as="image">
-                <div class="col-xs-2">
-                    <p>{image.title}</p>
-                    <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" maxHeight="150" maxWidth="150" class="img-fluid"/><br/>
-                </div>
-            </f:for>
-        </div>
+                <f:for each="{v:content.resources.fal(field: 'settings.image', uid: record.uid)}" as="image">
+                    <div class="col-xs-2">
+                        <p>{image.title}</p>
+                        <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" maxHeight="150" maxWidth="150" class="img-fluid"/><br/>
+                    </div>
+                </f:for>
+            </div>
+        </f:comment>
+
     </f:section>
 
     <f:section name="Main">
