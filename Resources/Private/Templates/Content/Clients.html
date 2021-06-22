@@ -1,0 +1,61 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+
+
+    <f:layout name = "Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="clients" description="Clients slider section" label="Clients">
+            <flux:form.option name="group" value="scaffold" />
+            <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
+            <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+
+            <flux:form.sheet name="title" label="main title" description="about main title">
+                <flux:field.text name="header" label="Header title" enableRichText="1"/>
+            </flux:form.sheet>
+
+
+            <flux:form.sheet name="images" label="image" description="clients image for slider">
+                <flux:field.inline.fal name="settings.image" required="1" maxItems="8" minItems="2" />
+            </flux:form.sheet>
+
+
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <a>Clients</a><br>
+        <div style="border-bottom: 1px solid#000; width: 100%"></div>
+
+
+    </f:section>
+
+    <f:section name="Main">
+
+        <section id="clients" class="clients">
+            <div class="container">
+
+                <div class="section-title">
+                    <f:format.html>{header}</f:format.html>
+                </div>
+
+                <div class="clients-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+                        <f:for each="{v:content.resources.fal(field: 'settings.image')}" as="image" iteration="iterator">
+                        <div class="swiper-slide">
+                            <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="img-fluid"/>
+                        </div>
+                        </f:for>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+</div>
