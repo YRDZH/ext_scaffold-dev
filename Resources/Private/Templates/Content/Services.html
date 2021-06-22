@@ -12,8 +12,32 @@
             <flux:form.option name="Fluidcontent" value="{sorting: 100}"/>
             <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
 
-            <flux:form.sheet name="title" label="main title" description="about main title">
+            <flux:form.sheet name="title" label="main title" description="Services main title">
                 <flux:field.text name="header" label="Header title" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl1" label="col1 settings" >
+                <flux:field.text name="text_col1" label="col1 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl2" label="col2 settings" >
+                <flux:field.text name="text_col2" label="col2 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl3" label="col3 settings" >
+                <flux:field.text name="text_col3" label="col3 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl4" label="col4 settings" >
+                <flux:field.text name="text_col4" label="col4 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl5" label="col5 settings" >
+                <flux:field.text name="text_col5" label="col5 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl6" label="col6 settings" >
+                <flux:field.text name="text_col6" label="col6 text" enableRichText="1"/>
             </flux:form.sheet>
 
 
@@ -44,12 +68,11 @@
                                 </svg>
                                 <i class="bx bxl-dribbble"></i>
                             </div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <f:format.html>{text_col1}</f:format.html>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box iconbox-orange ">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -57,12 +80,11 @@
                                 </svg>
                                 <i class="bx bx-file"></i>
                             </div>
-                            <h4><a href="">Sed Perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <f:format.html>{text_col2}</f:format.html>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box iconbox-pink">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -70,12 +92,11 @@
                                 </svg>
                                 <i class="bx bx-tachometer"></i>
                             </div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <f:format.html>{text_col3}</f:format.html>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-yellow">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -83,12 +104,11 @@
                                 </svg>
                                 <i class="bx bx-layer"></i>
                             </div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            <f:format.html>{text_col4}</f:format.html>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-lg-4 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box iconbox-red">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -96,12 +116,11 @@
                                 </svg>
                                 <i class="bx bx-slideshow"></i>
                             </div>
-                            <h4><a href="">Dele Cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            <f:format.html>{text_col5}</f:format.html>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-lg-4 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box iconbox-teal">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +128,7 @@
                                 </svg>
                                 <i class="bx bx-arch"></i>
                             </div>
-                            <h4><a href="">Divera Don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            <f:format.html>{text_col6}</f:format.html>
                         </div>
                     </div>
 
