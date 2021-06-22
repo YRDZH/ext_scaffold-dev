@@ -1,0 +1,90 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:layout name = "Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="whyus" description="whyus section" label="WhyUs">
+            <flux:form.option name="group" value="scaffold" />
+            <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
+            <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+
+            <flux:form.sheet name="cl1" label="col1 settings" >
+                <flux:field.text name="text_col1" label="col1 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl2" label="col2 settings" >
+                <flux:field.text name="text_col2" label="col2 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl3" label="col3 settings" >
+                <flux:field.text name="text_col3" label="col3 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl4" label="col4 settings" >
+                <flux:field.text name="text_col4" label="col4 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl5" label="col5 settings" >
+                <flux:field.text name="text_col5" label="col5 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+            <flux:form.sheet name="cl6" label="col6 settings" >
+                <flux:field.text name="text_col6" label="col6 text" enableRichText="1"/>
+            </flux:form.sheet>
+
+
+
+
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <a>WhuUs</a><br>
+        <div style="border-bottom: 1px solid#000; width: 100%"></div>
+        {text_col1}...
+
+    </f:section>
+
+    <f:section name="Main">
+
+        <section id="why-us" class="why-us">
+            <div class="container">
+
+                <div class="row no-gutters">
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col1}</f:format.html>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col2}</f:format.html>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col3}</f:format.html>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col4}</f:format.html>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col5}</f:format.html>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <f:format.html>{text_col6}</f:format.html>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+
+
+</div>
