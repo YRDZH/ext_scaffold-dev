@@ -1,0 +1,46 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:layout name = "Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="calltoaction" description="CTA section" label="CTA">
+            <flux:form.option name="group" value="scaffold" />
+            <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
+            <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+
+            <flux:field.text name="title" label="CTA title" enableRichText="1"/>
+
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <a>CTA</a><br>
+        <div style="border-bottom: 1px solid#000; width: 100%"></div>
+        {title}...
+
+    </f:section>
+
+    <f:section name="Main">
+
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-start">
+                        <f:format.html>{title}</f:format.html>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Call To Action</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+
+
+</div>

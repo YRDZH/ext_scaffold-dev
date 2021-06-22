@@ -862,6 +862,18 @@ section {
   font-size: 28px;
   font-weight: 700;
 }
+.cta h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cta h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
 
 .cta p {
   color: #fff;
