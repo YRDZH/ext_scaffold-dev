@@ -10,6 +10,31 @@
             <flux:form.option name="group" value="scaffold" />
             <flux:form.option name="Fluidcontent" value="{sorting: 150}"/>
             <flux:form.option name="icon" value="EXT:ext_scaffold/Resources/Public/assets/img/firebirdlogo.png"/>
+            <flux:field.text name="header" label="Header" enableRichText="1"/>
+            <flux:form.sheet name="col1" label="Column1" >
+                <flux:field.inline.fal name="img1" required="1" minItems="1" maxItems="1" />
+                <flux:field.text name="text1" label="description" enableRichText="1"/>
+                <flux:field.text name="twitter1" label="twitter" />
+                <flux:field.text name="facebook1" label="facebook" />
+                <flux:field.text name="instagramm1" label="instagramm" />
+                <flux:field.text name="linkedid1" label="linkedid" />
+            </flux:form.sheet>
+            <flux:form.sheet name="col2" label="Column2" >
+                <flux:field.inline.fal name="img2" required="1" minItems="1" maxItems="1" />
+                <flux:field.text name="text2" label="description" enableRichText="1"/>
+                <flux:field.text name="twitter2" label="twitter" />
+                <flux:field.text name="facebook2" label="facebook" />
+                <flux:field.text name="instagramm2" label="instagramm" />
+                <flux:field.text name="linkedid2" label="linkedid" />
+            </flux:form.sheet>
+            <flux:form.sheet name="col3" label="Column3" >
+                <flux:field.inline.fal name="img3" required="1" minItems="1" maxItems="1" />
+                <flux:field.text name="text3" label="description" enableRichText="1"/>
+                <flux:field.text name="twitter3" label="twitter" />
+                <flux:field.text name="facebook3" label="facebook" />
+                <flux:field.text name="instagramm3" label="instagramm" />
+                <flux:field.text name="linkedid3" label="linkedid" />
+            </flux:form.sheet>
 
 
         </flux:form>
@@ -28,58 +53,47 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Team</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <f:format.html>{header}</f:format.html>
                 </div>
-
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="member">
-                            <img src="typo3conf/ext/ext_scaffold/Resources/Public/assets/img/team/team-1.jpg" alt="">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
-                            <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                            </p>
+                            {v:content.resources.fal(field: 'img1') -> v:iterator.first() -> v:variable.set(name: 'image')}
+                            <f:image src="{image.id}" width="190" height="190"/>
+                            <f:format.html>{text1}</f:format.html>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                <a href="{twitter1}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a href="{facebook1}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="{instagramm1}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="{linkedid1}" target="_blank"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="member">
-                            <img src="typo3conf/ext/ext_scaffold/Resources/Public/assets/img/team/team-2.jpg" alt="">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Product Manager</span>
-                            <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                            </p>
+                            {v:content.resources.fal(field: 'img2') -> v:iterator.first() -> v:variable.set(name: 'image')}
+                            <f:image src="{image.id}" width="190" height="190"/>
+                            <f:format.html>{text2}</f:format.html>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                <a href="{twitter2}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a href="{facebook2}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="{instagramm2}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="{linkedid2}" target="_blank"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="member">
-                            <img src="typo3conf/ext/ext_scaffold/Resources/Public/assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                            </p>
+                            {v:content.resources.fal(field: 'img3') -> v:iterator.first() -> v:variable.set(name: 'image')}
+                            <f:image src="{image.id}" width="190" height="190"/>
+                            <f:format.html>{text3}</f:format.html>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                <a href="{twitter3}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a href="{facebook3}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="{instagramm3}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="{linkedid3}" target="_blank"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
