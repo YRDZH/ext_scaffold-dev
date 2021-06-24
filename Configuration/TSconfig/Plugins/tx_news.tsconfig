@@ -1,0 +1,4 @@
+tx_news.templateLayouts {
+    1 = News
+    2 = Events
+}
