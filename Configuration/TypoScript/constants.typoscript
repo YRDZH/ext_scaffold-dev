@@ -4,3 +4,11 @@ plugin.tx_ext_scaffold{
         layoutsRootPaths.0 = EXT:ext_scaffold/Resources/Private/Layouts/
     }
 }
+plugin.tx_news {
+    view {
+        templateRootPath = fileadmin/templates/ext/news/Templates/
+        partialRootPath = fileadmin/templates/ext/news/Partials/
+        layoutRootPath = fileadmin/templates/ext/news/Layouts/
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
+    }
+}
