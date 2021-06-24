@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<f:if condition="{news}">
+	<f:then>
+		<section id="services" class="services">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Services</h2>
+					<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+				</div>
+
+				<div class="row">
+					<f:if condition="{settings.hidePagination}">
+						<f:then>
+							<f:for each="{news}" as="newsItem" iteration="iterator">
+								<f:render partial="List/Records/Item3" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</f:then>
+						<f:else>
+							<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+								<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Records/Item3" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</n:widget.paginate>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+		</section>
+
+	</f:then>
+	<f:else>
+		<div class="no-news-found">
+			<f:translate key="list_nonewsfound" />
+		</div>
+	</f:else>
+</f:if>
+</html>
