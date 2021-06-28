@@ -1,5 +1,6 @@
 tx_news.templateLayouts {
-    1 = News
+    1 = Details
     2 = Events
-    3 = Home Slider
+    3 = News
+    4 = Services
 }

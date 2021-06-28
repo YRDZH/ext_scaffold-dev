@@ -39,15 +39,14 @@ page {
 
 
     includeJSFooter{
-        main = EXT:ext_scaffold/Resources/Public/assets/js/main.js
-
-
-    }
-    includeJS{
         bootstrapbundle = EXT:ext_scaffold/Resources/Public/assets/vendor/bootstrap/js/bootstrap.min.js
         glightbox = EXT:ext_scaffold/Resources/Public/assets/vendor/glightbox/js/glightbox.min.js
         isotopelayout = EXT:ext_scaffold/Resources/Public/assets/vendor/isotope-layout/isotope.pkgd.min.js
         phpemailform = EXT:ext_scaffold/Resources/Public/assets/vendor/php-email-form/validate.js
         swiper = EXT:ext_scaffold/Resources/Public/assets/vendor/swiper/swiper-bundle.min.js
+        main = EXT:ext_scaffold/Resources/Public/assets/js/main.js
+
+
     }
+
 }
