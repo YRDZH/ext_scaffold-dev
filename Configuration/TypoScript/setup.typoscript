@@ -24,7 +24,8 @@ plugin.tx_news {
         }
     }
 }
-
+tt_content.stdWrap.outerWrap = <div class="noprint">|</div>
+tt_content.stdWrap.outerWrap.if.isTrue.field = tx_ext_scaffold_noprint
 page {
 
     includeCSS{

@@ -8,19 +8,13 @@
 -->
 
 <f:section name="content">
-
-
-
 <f:if condition="{settings.templateLayout}">
 	<f:then>
 		<f:render partial="List/{settings.templateLayout}" arguments="{news: news,settings:settings,iterator:iterator}" />
-
 	</f:then>
 	<f:else>
 		<f:render partial="List/0" arguments="{news: news,settings:settings,iterator:iterator}" />
-
 	</f:else>
 </f:if>
-
 </f:section>
 </html>
