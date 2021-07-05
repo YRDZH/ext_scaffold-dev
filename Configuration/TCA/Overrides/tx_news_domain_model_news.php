@@ -37,9 +37,21 @@ ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news',
                 ],
             ],
         ],
+        'title1' => [
+            'exclude' => false,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel',
+            'config' => [
+                'type' => 'input',
+                'size' => 60,
+                'max' => 255,
+                'eval' => 'required',
+            ]
+        ],
     ]
 );
+
 ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
-    'tx_ext_scaffold_options, tx_ext_scaffold_special'
+    'tx_ext_scaffold_options, tx_ext_scaffold_special, title1'
 );

@@ -17,3 +17,4 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1487112284] = [
     'priority' => '70',
     'class' => \Vendor\CoolTagCloud\Form\Element\SelectTagCloudElement::class,
 ];
+$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['classes']['Domain/Model/News'][] = 'ext_scaffold';
